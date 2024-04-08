@@ -19,9 +19,11 @@ const config = {
     },
     extend: {
       colors: {
-        dark: {
-          1: "#504945",
-          2: "#282828",
+        gruvbox: {
+          bg: "#282828",
+          bg1: "#3c3836",
+          bg2: "#504945",
+          fg: "#ebdbb2",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -82,4 +84,3 @@ const config = {
 } satisfies Config;
 
 export default config;
-
