@@ -23,7 +23,7 @@ const Sidebar = () => {
               className={cn(
                 "flex gap-4 items-center p-4 rounded-lg justify-start font-bold",
                 {
-                  "bg-gruvbox-bg2":
+                  "bg-gruvbox-blue":
                     isActive &&
                     (pathName === "/"
                       ? link.route === "/"
