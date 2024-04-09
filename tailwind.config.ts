@@ -24,6 +24,7 @@ const config = {
           bg1: "#3c3836",
           bg2: "#504945",
           fg: "#ebdbb2",
+          blue: "#458588",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
