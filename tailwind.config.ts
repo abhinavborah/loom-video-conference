@@ -26,6 +26,9 @@ const config = {
           fg: "#ebdbb2",
           blue: "#458588",
           blue2: "#83a598",
+          orange: "#fe8019",
+          purple: "#d3869b",
+          yellow: "#d79921",
         },
       },
       backgroundImage: {
