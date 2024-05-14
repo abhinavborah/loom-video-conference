@@ -1,14 +1,20 @@
 import MeetingTypeList from "@/components/ui/MeetingTypeList";
+import React from "react";
+import { DateTime } from "luxon"; // Import DateTime from Luxon
 
 const Home = () => {
-  const now = new Date();
-  const time = now.toLocaleTimeString("en-US", {
+  const now = DateTime.local(); // Use Luxon's local method
+
+  // Format the time and date with options
+  const time = now.toLocaleString({
     hour: "2-digit",
     minute: "2-digit",
   });
-  const date = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "full",
-  }).format(now);
+  const date = now.toLocaleString({
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+  });
 
   return (
     <section className="flex size-full flex-col gap-10 text-gruvbox-fg">
