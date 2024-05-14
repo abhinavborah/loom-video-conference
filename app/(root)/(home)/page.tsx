@@ -1,9 +1,16 @@
 import MeetingTypeList from "@/components/ui/MeetingTypeList";
 import React from "react";
-import { DateTime } from "luxon"; // Import DateTime from Luxon
+import { DateTime } from "luxon"; // Import DateTime and Intl from Luxon
 
 const Home = () => {
-  const now = DateTime.local(); // Use Luxon's local method
+  // Get the user's time zone using a browser API (if available)
+  const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+  // Create a DateTime object in UTC
+  const utcNow = DateTime.utc();
+
+  // Apply the user's time zone if available
+  const now = userTimeZone ? utcNow.setZone(userTimeZone) : utcNow;
 
   // Format the time and date with options
   const time = now.toLocaleString({
